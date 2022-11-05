@@ -455,8 +455,6 @@ ul {
 
 .partner-item {
   width: 170px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
 }
 
 .partner-item:hover {
@@ -474,7 +472,18 @@ ul {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
+
+.partner-link:focus {
+  border-color: var(--accent-color);
+}
+
+.partner-link:focus .icon-logo {
+  fill: var(--accent-color);
+}
+
 .icon-logo {
   fill: #afb1b8;
   padding: 16px 32px;
