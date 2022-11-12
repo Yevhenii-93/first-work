@@ -403,7 +403,7 @@
           </address>
         </div>
         <div class="footer-social-container">
-          <h3 class="footer-social-title">приєднуйтесь</h3>
+          <h3 class="footer-social-title">Приєднуйтесь</h3>
           <ul class="footer-social-list list">
             <li class="footer-social-item">
               <a href="" class="footer-social-link">
@@ -435,6 +435,21 @@
             </li>
           </ul>
         </div>
+        <div class="follow-footer">
+          <form class="footer-form">
+            <h3 class="footer-social-title">Підпишіться на розсилку</h3>
+            <input
+              class="mail-footer"
+              type="email"
+              name="mail"
+              id="mail"
+              placeholder="E-mail"
+            />
+            <button class="footer-btn" type="submit">
+              <span class="footer-btn-text">Підписатися</span>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <!----------------------------------Модалка---------------------------->
@@ -445,6 +460,62 @@
             <use href="./images/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
+        <div class="modal-form">
+          <h2>Залиште свої дані, ми вам передзвонимо</h2>
+          <form class="form">
+            <div class="form-field">
+              <label class="form-label">
+                Ім'я
+                <div class="pos-input">
+                  <input type="text" class="form-input" />
+                  <svg class="icon-modal">
+                    <use href="./images/symbol-defs.svg#modal-name"></use>
+                  </svg>
+                </div>
+              </label>
+            </div>
+            <div class="form-field">
+              <label class="form-label"
+                >Телефон
+                <div class="pos-input">
+                  <input type="tel" class="form-input" />
+                  <svg class="icon-modal">
+                    <use href="./images/symbol-defs.svg#modal-phone"></use>
+                  </svg>
+                </div>
+              </label>
+            </div>
+            <div class="form-field">
+              <label for="email" class="form-label"
+                >Пошта
+                <div class="pos-input">
+                  <input type="email" id="email" />
+                  <svg class="icon-modal">
+                    <use href="./images/symbol-defs.svg#modal-mail"></use>
+                  </svg>
+                </div>
+              </label>
+            </div>
+            <div class="form-field">
+              <label class="form-label"
+                >Коментар
+                <textarea
+                  class="comment"
+                  placeholder="Введіть текст"
+                ></textarea>
+              </label>
+            </div>
+            <div class="">
+              <label class="form-label">
+                <input type="checkbox" class="rulese" />
+                <span class="icon-check"></span>
+                Погоджуюся з розсилкою та приймаю
+                <a href="#" class="rulese-link">Умови договору</a>
+              </label>
+            </div>
+            <button class="form-btn">Відправити</button>
+          </form>
+        </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>

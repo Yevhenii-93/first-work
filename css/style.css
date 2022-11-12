@@ -65,9 +65,6 @@ ul {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  /* background-color: tomato; */
-  /* outline: 2px solid tomato; */
 }
 
 /* ---------------------------Шапка --------------------*/
@@ -217,7 +214,8 @@ ul {
   color: #ffffff;
 }
 
-.hero-btn {
+.hero-btn,
+.footer-btn {
   padding: 10px 32px;
   font-family: inherit;
   font-weight: 700;
@@ -561,6 +559,49 @@ ul {
   fill: #ffffff;
   padding: 12px;
 }
+.mail-footer {
+  margin-right: 12px;
+  padding-left: 16px;
+
+  width: 358px;
+  height: 50px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: inherit;
+}
+
+.footer-btn {
+  position: relative;
+  width: 200px;
+}
+
+.footer-btn::after {
+  position: absolute;
+  right: 28px;
+  bottom: 13px;
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-image: url(../images/send.png);
+}
+
+.follow-footer {
+  margin-left: 93px;
+}
+
+.footer-btn-text {
+  display: flex;
+  align-items: center;
+}
 
 /* ---------------------------Модалка --------------------*/
 
@@ -617,6 +658,108 @@ ul {
 
 .icon-close-modal:hover {
   fill: var(--accent-color);
+}
+
+.modal-form h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+.form {
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  color: var(--text-color);
+}
+
+.pos-input {
+  position: relative;
+  margin-top: 4px;
+}
+.form-field input,
+.form-label textarea {
+  width: 100%;
+  margin: 0;
+  padding: 11px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+}
+
+.form-input:focus {
+  border-color: var(--accent-color);
+}
+
+.icon-modal {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+}
+
+.form-label textarea {
+  margin-top: 4px;
+  padding: 12px 16px;
+  width: 448px;
+  height: 120px;
+}
+
+.comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.rulese {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+
+  appearance: none;
+}
+
+.checkbox:checked {
+}
+
+.icon-check {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/icon-check1.svg);
+}
+
+.rulese-link {
+  color: #2196f3;
+}
+
+.form-btn {
+  width: 200px;
+  height: 50px;
+  padding: 10px 52px;
+  margin-left: 124px;
+  background-color: var(--accent-color);
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
 }
 
 /* ---------------------------Друга сторінка --------------------*/
