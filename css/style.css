@@ -432,16 +432,17 @@ ul {
   padding: 12px;
 }
 
-.team-social-link:focus .icon-social {
-  fill: #ffffff;
-}
-
 .team-social-link:hover,
 .team-social-link:focus,
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--accent-color);
   outline: transparent;
+}
+
+.team-social-link:focus .icon-social,
+.team-social-link:hover .icon-social {
+  fill: #ffffff;
 }
 
 /* ---------------------------Постійні клієнти --------------------*/
@@ -453,10 +454,6 @@ ul {
 
 .partner-item {
   width: 170px;
-}
-
-.partner-item:hover {
-  border-color: var(--accent-color);
 }
 
 .partner-item:not(:last-child) {
@@ -474,6 +471,7 @@ ul {
   border-radius: 4px;
 }
 
+.partner-link:hover,
 .partner-link:focus {
   border-color: var(--accent-color);
 }
@@ -576,7 +574,9 @@ ul {
   border-radius: 4px;
   background-color: inherit;
 }
-
+.mail-footer:focus {
+  border: transparent;
+}
 .footer-btn {
   position: relative;
   width: 200px;
@@ -628,15 +628,16 @@ ul {
   transform: translate(-50%, -50%);
 
   width: 528px;
-  height: 521px;
+  height: 581px;
 
   background-color: #ffffff;
+  border-radius: 4px;
 }
 
 .modal-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
   margin-top: 8px;
   margin-right: 8px;
   margin-left: auto;
@@ -652,12 +653,18 @@ ul {
 }
 
 .icon-close-modal {
-  padding: 6px;
+  width: 18px;
+  height: 18px;
   fill: #000000;
 }
 
-.icon-close-modal:hover {
+.modal-btn:hover .icon-close-modal {
+  border: var(--accent-color);
   fill: var(--accent-color);
+}
+
+.modal-form {
+  padding: 40px;
 }
 
 .modal-form h2 {
@@ -671,10 +678,7 @@ ul {
 }
 
 .form {
-  padding-right: 40px;
-  padding-left: 40px;
-  margin-right: auto;
-  margin-left: auto;
+  letter-spacing: 0.03em;
 }
 
 .form-field {
@@ -683,7 +687,6 @@ ul {
 }
 
 .form-label {
-  margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: calc(14 / 12);
@@ -694,8 +697,9 @@ ul {
   position: relative;
   margin-top: 4px;
 }
-.form-field input,
-.form-label textarea {
+
+.form-input,
+.comment {
   width: 100%;
   margin: 0;
   padding: 11px;
@@ -704,8 +708,9 @@ ul {
   padding-left: 42px;
 }
 
-.form-input:focus {
-  border-color: var(--accent-color);
+.form-input:focus,
+.form-input:hover {
+  border: 1px solid var(--accent-color);
 }
 
 .icon-modal {
@@ -715,6 +720,11 @@ ul {
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
+}
+
+.form-input:hover + .icon-modal,
+.form-input:focus + .icon-modal {
+  fill: var(--accent-color);
 }
 
 .form-label textarea {
@@ -728,15 +738,23 @@ ul {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.comment:hover,
+.comment:focus {
+  border-color: var(--accent-color);
+}
+
 .rulese {
+  margin-bottom: 30px;
+}
+
+.checkbox {
+  display: flex;
+  text-align: center;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
 
   appearance: none;
-}
-
-.checkbox:checked {
 }
 
 .icon-check {
@@ -745,7 +763,18 @@ ul {
   height: 15px;
   background-image: url(../images/icon-check1.svg);
 }
-
+.checkbox:checked + .icon-check {
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check2.svg);
+  display: inline-block;
+  background-size: contain;
+  background-origin: content-box;
+  border: 3px solid transparent;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  width: 16px;
+  height: 15px;
+}
 .rulese-link {
   color: #2196f3;
 }
